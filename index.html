@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>WebSIG Costa</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div class="sidebar">
+    <h3>Camadas</h3>
+    <!-- Botões para camadas temáticas -->
+    <div class="toggle-group">
+      <button class="toggle-btn active" data-layer="pcvi">PCVI</button>
+      <button class="toggle-btn" data-layer="hcvi">HCVI</button>
+      <button class="toggle-btn" data-layer="ccvi">CCVI</button>
+      <button class="toggle-btn" data-layer="relation">Relação</button>
+    </div>
+
+    <!-- Área de resultados e gráfico -->
+    <div id="results">
+      <canvas id="resultChart"></canvas>
+      <div class="chart-legend" id="legend"></div>
+    </div>
+
+    <!-- Descrição da camada ativa -->
+    <div id="layerDescription" class="layer-description"></div>
+  </div>
+
+  <!-- Mapa principal -->
+  <div id="map"></div>
+
+  <!-- Script principal -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
